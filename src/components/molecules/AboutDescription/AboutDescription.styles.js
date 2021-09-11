@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  text-align: justify;
+  p {
+    text-indent: 2rem;
+  }
 `;

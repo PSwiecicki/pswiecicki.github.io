@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
   html {
     box-sizing: border-box;
   }
@@ -12,9 +10,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', cursive;
     background-color: ${({ theme }) => theme.colors.grey};
-    color: ${({ theme }) => theme.colors.blue};
+    color: '#000000';
+  }
+
+  h1, h2, h3 {
+    font-family: 'IM Fell DW Pica', cursive;
   }
 
   a, button {

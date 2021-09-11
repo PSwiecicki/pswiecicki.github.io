@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  text-align: justify;
+  img {
+    max-width: 100px;
+  }
 `;

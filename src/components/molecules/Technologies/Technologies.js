@@ -2,6 +2,7 @@ import React from 'react';
 import NormalList from 'components/atoms/NormalList/NormalList';
 import SwitchButton from 'components/atoms/SwitchButton/SwitchButton';
 import { Wrapper } from './Technologies.style';
+import ScrollList from 'components/atoms/ScrollList/ScrollList';
 
 const technologies = [
   'HTML 5',
@@ -23,6 +24,7 @@ const Technologies = () => {
         <p>Scroll List</p>
       </div>
       <NormalList technologies={technologies} />
+      <ScrollList technologies={technologies} />
     </Wrapper>
   );
 };
