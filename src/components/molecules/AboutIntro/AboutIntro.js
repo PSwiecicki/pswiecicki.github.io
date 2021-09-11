@@ -4,7 +4,7 @@ import { Wrapper } from './AboutIntro.style';
 const AboutIntro = () => {
   return (
     <Wrapper>
-      <img src="assets/img/my-photo.png" alt="My github avatar"></img>
+      <img src="assets/img/my-photo1.png" alt="My github avatar"></img>
       <div className="container">
         <h1>Hi!</h1>
         <div className="intro-text">

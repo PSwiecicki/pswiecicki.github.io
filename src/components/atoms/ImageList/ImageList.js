@@ -1,12 +1,11 @@
-import Technologies from 'components/molecules/Technologies/Technologies';
 import React from 'react';
-import { Wrapper } from './ScrollList.style';
+import { Wrapper } from './ImageList.style';
 
 const technologiesLinks = new Map();
 
-const ScrollList = ({ technologies }) => {
+const ImageList = ({ technologies }) => {
   technologies.map((tech) => {
-    technologiesLinks.set(
+    return technologiesLinks.set(
       tech,
       `/assets/img/tech/${tech
         .toLowerCase()
@@ -18,10 +17,15 @@ const ScrollList = ({ technologies }) => {
   return (
     <Wrapper>
       {technologies.map((value) => {
-        return <img alt={value} src={technologiesLinks.get(value)} />;
+        return (
+          <div>
+            <img alt={value} src={technologiesLinks.get(value)} />
+            <p>{value}</p>
+          </div>
+        );
       })}
     </Wrapper>
   );
 };
 
-export default ScrollList;
+export default ImageList;

@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: ${({ theme }) => theme.colors.blue};
+    background-color: ${({ theme }) => theme.colors.red};
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
@@ -35,10 +35,10 @@ export const Wrapper = styled.div`
   .slider:before {
     position: absolute;
     content: '';
-    height: 18px;
-    width: 18px;
-    left: 1px;
-    bottom: 1px;
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
     background-color: white;
     -webkit-transition: 0.4s;
     transition: 0.4s;
@@ -49,8 +49,8 @@ export const Wrapper = styled.div`
   }
 
   input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
     transform: translateX(20px);
   }
 

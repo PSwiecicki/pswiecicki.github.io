@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NormalList from 'components/atoms/NormalList/NormalList';
 import SwitchButton from 'components/atoms/SwitchButton/SwitchButton';
 import { Wrapper } from './Technologies.style';
-import ScrollList from 'components/atoms/ScrollList/ScrollList';
+import ImageList from 'components/atoms/ImageList/ImageList';
 
 const technologies = [
   'HTML 5',
@@ -15,16 +15,25 @@ const technologies = [
 ];
 
 const Technologies = () => {
+  const [isNormalList, setIsNormalList] = useState(true);
+
+  const handleSwitchChange = () => {
+    setIsNormalList(!isNormalList);
+  };
+
   return (
     <Wrapper>
       <h3>Known technologies:</h3>
       <div>
         <p>Normal List </p>
-        <SwitchButton />
-        <p>Scroll List</p>
+        <SwitchButton handleOnChange={handleSwitchChange} />
+        <p>Image List</p>
       </div>
-      <NormalList technologies={technologies} />
-      <ScrollList technologies={technologies} />
+      {isNormalList ? (
+        <NormalList technologies={technologies} />
+      ) : (
+        <ImageList technologies={technologies} />
+      )}
     </Wrapper>
   );
 };
