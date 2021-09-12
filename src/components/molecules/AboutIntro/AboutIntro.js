@@ -13,7 +13,7 @@ const AboutIntro = ({ imgLoaded }) => {
         </h1>
         <div className="intro-text">
           <h2>My name is Patryk</h2>
-          <h3>and I want to become a&nbsp;great Developer.</h3>
+          <h4>and I want to become a&nbsp;great Developer.</h4>
         </div>
       </div>
     </Wrapper>

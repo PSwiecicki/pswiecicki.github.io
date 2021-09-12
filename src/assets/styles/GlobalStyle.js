@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     color: '#000000';
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     font-family: 'IM Fell DW Pica', cursive;
   }
 

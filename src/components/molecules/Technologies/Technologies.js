@@ -26,7 +26,7 @@ const Technologies = () => {
       <h3>
         <span className="first-word">Known</span> technologies:
       </h3>
-      <div>
+      <div className="switch-button">
         <p>Normal List </p>
         <SwitchButton handleOnChange={handleSwitchChange} />
         <p>Image List</p>
