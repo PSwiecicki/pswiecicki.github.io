@@ -6,7 +6,7 @@ export const Wrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.red};
+  background-color: ${({ color, theme }) => theme.colors[color.toLowerCase()]};
   display: flex;
   justify-content: flex-end;
   z-index: 1;
@@ -28,13 +28,14 @@ export const StyledLink = styled(NavLink).attrs({
   transition: all 0.3s ease-out;
 
   &.${activeClassName} {
-    border-top: 6px solid ${({ theme }) => theme.colors.darkRed};
-    border-bottom: 6px solid ${({ theme }) => theme.colors.darkRed};
+    border-top: 6px solid ${({ color, theme }) => theme.colors['dark' + color]};
+    border-bottom: 6px solid
+      ${({ color, theme }) => theme.colors['dark' + color]};
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.lightRed};
-    border-color: ${({ theme }) => theme.colors.lightRed};
+    background-color: ${({ color, theme }) => theme.colors['light' + color]};
+    border-color: ${({ color, theme }) => theme.colors['light' + color]};
     transform: translate(3px, 3px);
   }
 

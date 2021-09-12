@@ -5,14 +5,14 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  height: 100vh;
 
   .container {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     position: absolute;
     width: 100%;
-    margin-right: 400px;
   }
 
   h1 {
@@ -39,8 +39,20 @@ export const Wrapper = styled.div`
   }
 
   img {
-    max-width: 400px;
+    max-width: 800px;
     margin-left: auto;
     float: right;
+  }
+
+  .red {
+    color: ${({ theme }) => theme.colors.red};
+  }
+
+  .blue {
+    color: ${({ theme }) => theme.colors.blue};
+  }
+
+  .green {
+    color: ${({ theme }) => theme.colors.green};
   }
 `;

@@ -4,7 +4,9 @@ import { Wrapper } from './AboutDescription.styles';
 const AboutDescription = () => {
   return (
     <Wrapper>
-      <h3>About me: </h3>
+      <h3>
+        <span className="first-word">About</span> me:{' '}
+      </h3>
       <p>Hi! My name is Patryk, I'm 27 years old and live in Wrocław.</p>
       <p>
         I graduated from the first-cycle studies at the Wrocław University of

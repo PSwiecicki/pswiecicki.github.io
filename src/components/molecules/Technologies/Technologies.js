@@ -23,17 +23,21 @@ const Technologies = () => {
 
   return (
     <Wrapper>
-      <h3>Known technologies:</h3>
+      <h3>
+        <span className="first-word">Known</span> technologies:
+      </h3>
       <div>
         <p>Normal List </p>
         <SwitchButton handleOnChange={handleSwitchChange} />
         <p>Image List</p>
       </div>
-      {isNormalList ? (
-        <NormalList technologies={technologies} />
-      ) : (
-        <ImageList technologies={technologies} />
-      )}
+      <div className="list">
+        {isNormalList ? (
+          <NormalList technologies={technologies} />
+        ) : (
+          <ImageList technologies={technologies} />
+        )}
+      </div>
     </Wrapper>
   );
 };
